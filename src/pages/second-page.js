@@ -1,27 +1,21 @@
 import { Fragment } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { NavigationHeader } from "../components/navigation-header";
 import { NavigationFooter } from "../components/navigation-footer";
 
-function PageIndex() {
-  const router = useRouter();
-  const { t } = useTranslation("common");
+function PageSecond() {
+  const { t } = useTranslation("second-page");
+
   return (
     <Fragment>
       <main>
         <NavigationHeader title={t("h1")} />
-        <div>
-          <Link href="/" locale={router.locale === "en" ? "hi" : "en"}>
-            <button>{t("change-locale")}</button>
-          </Link>
-          <Link href="/second-page">
-            <button type="button">{t("go-to-second-page")}</button>
-          </Link>
-        </div>
+        <Link href="/">
+          <button type="button">{t("back-to-homepage")}</button>
+        </Link>
       </main>
       <NavigationFooter />
     </Fragment>
@@ -30,8 +24,8 @@ function PageIndex() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["seo", "common", "footer"])),
+    ...(await serverSideTranslations(locale, ["seo", "second-page", "footer"])),
   },
 });
 
-export default PageIndex;
+export default PageSecond;

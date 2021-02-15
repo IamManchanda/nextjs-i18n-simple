@@ -1,0 +1,7 @@
+{
+  "h1": "एक सरल उदाहरण",
+  "change-locale": "लोकेल परिवर्तन करें",
+  "go-to-second-page": "दूसरे पेज पर जाइये",
+  "error-with-status": "सर्वर पर {{statusCode}} त्रुटि हुई",
+  "error-without-status": "सर्वर पर एक त्रुटि हुई"
+}
