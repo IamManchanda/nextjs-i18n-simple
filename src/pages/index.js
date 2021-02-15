@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
@@ -12,6 +13,9 @@ function PageIndex() {
   const { t } = useTranslation("home-page");
   return (
     <Fragment>
+      <Head>
+        <title>{t("home-page-title")}</title>
+      </Head>
       <main>
         <NavigationHeader title={t("heading")} />
         <div>

@@ -8,8 +8,6 @@ export const NavigationHeader = ({ title }) => {
   return (
     <Fragment>
       <Head>
-        <title>{t("app-title")}</title>
-
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
           rel="stylesheet"

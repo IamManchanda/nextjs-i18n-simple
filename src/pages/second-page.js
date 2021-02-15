@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { Fragment } from "react";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
@@ -11,6 +12,9 @@ function PageSecond() {
 
   return (
     <Fragment>
+      <Head>
+        <title>{t("second-page-title")}</title>
+      </Head>
       <main>
         <NavigationHeader title={t("heading")} />
         <Link href="/">
