@@ -31,7 +31,7 @@ function PageIndex() {
 export const getStaticProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale, [
-      "header",
+      "common",
       "home-page",
       "footer",
     ])),
