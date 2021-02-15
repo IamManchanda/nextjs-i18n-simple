@@ -13,7 +13,7 @@ function PageIndex() {
   return (
     <Fragment>
       <main>
-        <NavigationHeader title={t("h1")} />
+        <NavigationHeader title={t("heading")} />
         <div>
           <Link href="/" locale={router.locale === "en" ? "hi" : "en"}>
             <button>{t("change-locale")}</button>
