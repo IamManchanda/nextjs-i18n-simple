@@ -12,7 +12,7 @@ function PageSecond() {
   return (
     <Fragment>
       <main>
-        <NavigationHeader title={t("h1")} />
+        <NavigationHeader title={t("heading")} />
         <Link href="/">
           <button type="button">{t("back-to-homepage")}</button>
         </Link>
@@ -24,7 +24,11 @@ function PageSecond() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["seo", "second-page", "footer"])),
+    ...(await serverSideTranslations(locale, [
+      "header",
+      "second-page",
+      "footer",
+    ])),
   },
 });
 

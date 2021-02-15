@@ -9,7 +9,7 @@ import { NavigationFooter } from "../components/navigation-footer";
 
 function PageIndex() {
   const router = useRouter();
-  const { t } = useTranslation("common");
+  const { t } = useTranslation("home-page");
   return (
     <Fragment>
       <main>
@@ -30,7 +30,11 @@ function PageIndex() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["seo", "common", "footer"])),
+    ...(await serverSideTranslations(locale, [
+      "header",
+      "home-page",
+      "footer",
+    ])),
   },
 });
 

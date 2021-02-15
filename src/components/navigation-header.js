@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import { useTranslation } from "next-i18next";
 
 export const NavigationHeader = ({ title }) => {
-  const { t } = useTranslation("seo");
+  const { t } = useTranslation("header");
 
   return (
     <Fragment>
